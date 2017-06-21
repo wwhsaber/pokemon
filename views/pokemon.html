@@ -1,0 +1,32 @@
+<%- include('header') %>
+
+  <div class="pokemon-box">
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" ><a href="#home" aria-controls="home" role="tab" data-toggle="tab">基础</a></li>
+    <li role="presentation"  class="active"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">能力</a></li>
+    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">招式</a></li>
+    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">描述</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content ">
+    <div role="tabpanel" class="tab-pane " id="home">
+    	<div>
+			<%- include('component/basic') %>	
+    	</div>
+    </div>
+    <div role="tabpanel" class="tab-pane active" id="profile">
+		<%- include('component/ability') %>
+    </div>
+    <div role="tabpanel" class="tab-pane " id="messages"></div>
+    <div role="tabpanel" class="tab-pane " id="settings">
+		<%- include('component/describe') %> 
+    </div>
+  </div>
+  </div>
+
+
+
+
+<%- include('footer') %>

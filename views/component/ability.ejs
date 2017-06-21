@@ -1,0 +1,111 @@
+	<div>
+		<div class="flex-box">
+			<div class="flex-1 pokemon-img">
+				<img src="http://saberwwh.oss-cn-shenzhen.aliyuncs.com/pokemon/<%= pokemon.id %>.png" alt="">				
+			</div>
+			<div class="flex-1 line-height padding">
+				<div class="fs-16"><%= pokemon.name %></div>
+				<div class="flex-box-p">
+					<div class="flex-48 bg-<%= pokemon.nature[0] %> btn-my"><%= pokemon.nature[0] %></div>
+					<% if(pokemon.nature[1]) {%>
+					<div class="flex-48 bg-<%= pokemon.nature[1] %> btn-my"><%= pokemon.nature[1] %></div>
+					<% } %>
+				</div>
+				<div>特性<br />　<span class="font-blue"><%= pokemon.features[0] %> </span></div>
+				<div>隐藏特性<br />　<span class="font-blue"><%= pokemon.hide_features[0] %></span></div>
+				<div>身高<br />　<span class="font-gray"><%= pokemon.height %>m</span></div>
+				<div>体重<br />　<span  class="font-gray"><%= pokemon.weight %>kg</span></div>
+			</div>
+		</div>
+		<div>
+			<table class="table race bg-草" >
+  				<tr>
+  					<td class="col-xs-6">种族值</td>
+  					<td class="col-xs-3">Lv.50</td>
+  					<td class="col-xs-3">Lv.100</td>
+  				</tr>
+  				<tr>
+  					<td>
+	  					<div class="progress">
+	  						<div class="progress-bar progress-bar-success progress-bar-striped" style="width: <%- (pokemon.race[0])*100/250 %>%;">
+	  						</div>
+	   					 		HP　<%- pokemon.race[0] %>
+
+						</div>
+  					</td>
+  					<td><%- race.half[0] %></td>
+  					<td><%- race.full[0] %></td>
+  				</tr>
+  				<tr>
+  					<td>
+	  					<div class="progress">
+	  						<div class="progress-bar progress-bar-info progress-bar-striped"  style="width: <%- (pokemon.race[1])*100/250 %>%;">
+	  						</div>
+	   					 		攻击 <%- pokemon.race[1] %>
+
+						</div>
+  					</td>
+  					<td><%- race.half[1] %></td>
+  					<td><%- race.full[1] %></td>
+  				</tr>
+  				<tr>
+  					<td>
+	  					<div class="progress">
+	  						<div class="progress-bar progress-bar-info progress-bar-striped"  style="width: <%- (pokemon.race[2])*100/250 %>%;">
+	  						</div>
+	   					 		防御 <%- pokemon.race[2] %>
+						</div>
+  					</td>
+  					<td><%- race.half[2] %></td>
+  					<td><%- race.full[2] %></td>
+  				</tr>
+  				<tr>
+  					<td>
+	  					<div class="progress">
+	  						<div class="progress-bar progress-bar-warning progress-bar-striped" style="width: <%- (pokemon.race[3])*100/250 %>%;">
+	  						</div>
+	   					 		特攻 <%- pokemon.race[3] %>
+
+						</div>
+  					</td>
+  					<td><%- race.half[3] %></td>
+  					<td><%- race.full[3] %></td>
+  				</tr>
+  				<tr>
+  					<td>
+	  					<div class="progress">
+	  						<div class="progress-bar progress-bar-danger progress-bar-striped" style="width: <%- (pokemon.race[4])*100/250 %>%;">
+	  						</div>
+	   					 		特防 <%- pokemon.race[4] %>
+
+						</div>
+  					</td>
+  					<td><%- race.half[4] %></td>
+  					<td><%- race.full[4] %></td>
+  				</tr>
+  				<tr>
+  					<td>
+	  					<div class="progress">
+	  						<div class="progress-bar progress-bar-danger progress-bar-striped" style="width: <%- (pokemon.race[5])*100/250 %>%;">
+	  						</div>
+	   					 	<div>速度 <%- pokemon.race[5] %></div>
+						</div>
+  					</td>
+  					<td><%- race.half[5] %></td>
+  					<td><%- race.full[5] %></td>
+  				</tr>
+  				<tr class=" font-center">
+  					<td colspan="3">总和 <%- race.total %></td>
+  				</tr>
+
+			</table>
+		</div>
+		
+	</div>
+
+<style type="text/css">
+	.race .progress{
+		text-align: right;
+		padding-right: 1rem
+	}
+</style>

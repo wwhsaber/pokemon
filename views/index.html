@@ -1,0 +1,46 @@
+ <%- include('header') %>
+ <table class="table table-striped pokemon">
+  <tr class="danger">
+  	<td rowspan=2>全国编号</td>
+  	<td rowspan=2>图像</td>
+  	<td colspan="1">精灵宝可梦</td>
+  	<td rowspan=2 colspan="2">属性</td>
+  </tr>
+  <tr class="danger">
+  	<td colspan="1">中文</td>
+  </tr>
+  <% for(var i=0; i<pokemon.length; i++) {%>
+  <tr class="active">
+  	<td>#<span><%= pokemon[i].id %></span></td>
+  	<td><span class="icon">
+    <a href="pokemon/<%= pokemon[i].id %>">
+      <img class="lazy" src='images/025.png' data-original="http://saberwwh.oss-cn-shenzhen.aliyuncs.com/Front/<%= pokemon[i].id %>.png" alt="">       
+    </a>
+    </span></td>
+  	<td colspan="1">  
+      <a href="pokemon/<%= pokemon[i].id %>">
+        <%= pokemon[i].name %>
+      </a>
+    </td>
+    <% if(pokemon[i].nature[1]) {%>
+      <td class="bg-<%- pokemon[i].nature[0]%>">
+        <%- pokemon[i].nature[0] %>
+      </td>
+      <td class="bg-<%- pokemon[i].nature[1]%>">
+        <%= pokemon[i].nature[1] %>
+      </td>
+      <% } else { %>
+      <td colspan="2" class="bg-<%- pokemon[i].nature[0]%>">
+        <%- pokemon[i].nature[0] %>
+      </td>
+    <% } %>
+  </tr>
+  <% } %> 
+
+</table>
+</div>
+<%- include('footer') %>
+<script type="text/javascript">
+ 
+</script>
+

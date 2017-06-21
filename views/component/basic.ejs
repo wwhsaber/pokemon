@@ -1,0 +1,42 @@
+	<div class="big-img">
+		<img src="http://saberwwh.oss-cn-shenzhen.aliyuncs.com/pokemon/<%= pokemon.id %>.png" alt="">						
+	</div>
+	<div>
+		<ul class="list-group ">
+		  <li class="list-group-item list-group-item-success flex-box-p"><div><%= pokemon.name %> Bulbasaur</div> <div>#<%= pokemon.id %></div></li>
+		  <li class="list-group-item list-group-item-info flex-box-p"><div>分类</div> <div><%= pokemon.classify %></div></li>
+		  <li class="list-group-item list-group-item-warning flex-box-p"><div>属性</div> <div><span><%= pokemon.nature[0] %></span> <span><%= pokemon.nature[1] %></span></div></li>
+		  <li class="list-group-item list-group-item-danger flex-box-p"><div>取得努力点</div><div><%= strive %></div></li>
+		  <li class="list-group-item list-group-item-info flex-box-p"><div>蛋组</div><div><%= pokemon.egg[0] %> <%= pokemon.egg[1] %></div></li>
+		  <li class="list-group-item list-group-item-success flex-box-p"><div>孵化周期</div><div>21(5355步)</div></li>
+		  <li class="list-group-item list-group-item-warning flex-box-p"><div>性别比例</div><div><%= pokemon.sex[0] %>雄性,<%= pokemon.sex[1] %>雌性</div></li>
+		  <li class="list-group-item list-group-item-warning flex-box-p"><div>捕获度</div><div><%= pokemon.catch %></div></li>
+		  <li class="list-group-item list-group-item-warning flex-box-p"><div>100级时经验</div><div><%= pokemon.fullx_ex %></div></li>
+		  <li class="list-group-item list-group-item-warning flex-box-p"><div>基础经验值</div><div><%= pokemon.basic_ex %></div></li>
+		  <li class="list-group-item list-group-item-warning flex-box-p"><div>对战经验值</div><div><%= pokemon.battle_ex %></div></li>
+		</ul>
+	</div>
+	<div class="flex-box-p">
+	<ul class="list-group flex-1">
+		<li class="list-group-item flex-box-p"><div>普</div><div><%- natureArr[0] %></div></li>
+		<li class="list-group-item flex-box-p"><div>火</div><div><%- natureArr[1] %></div></li>
+		<li class="list-group-item flex-box-p"><div>水</div><div><%- natureArr[2] %></div></li>
+		<li class="list-group-item flex-box-p"><div>草</div><div><%- natureArr[3] %></div></li>
+		<li class="list-group-item flex-box-p"><div>电</div><div><%- natureArr[4] %></div></li>
+		<li class="list-group-item flex-box-p"><div>冰</div><div><%- natureArr[5] %></div></li>
+		<li class="list-group-item flex-box-p"><div>斗</div><div><%- natureArr[6] %></div></li>
+		<li class="list-group-item flex-box-p"><div>毒</div><div><%- natureArr[7] %></div></li>
+		<li class="list-group-item flex-box-p"><div>地</div><div><%- natureArr[8] %></div></li>
+   </ul>
+	<ul class="list-group flex-1">
+		<li class="list-group-item flex-box-p"><div>飞</div><div><%- natureArr[9] %></div></li>
+		<li class="list-group-item flex-box-p"><div>超</div><div><%- natureArr[10] %></div></li>
+		<li class="list-group-item flex-box-p"><div>虫</div><div><%- natureArr[11] %></div></li>
+		<li class="list-group-item flex-box-p"><div>岩</div><div><%- natureArr[12] %></div></li>
+		<li class="list-group-item flex-box-p"><div>鬼</div><div><%- natureArr[13] %></div></li>
+		<li class="list-group-item flex-box-p"><div>龙</div><div><%- natureArr[14] %></div></li>
+		<li class="list-group-item flex-box-p"><div>恶</div><div><%- natureArr[15] %></div></li>
+		<li class="list-group-item flex-box-p"><div>钢</div><div><%- natureArr[16] %></div></li>
+		<li class="list-group-item flex-box-p"><div>妖</div><div><%- natureArr[17] %></div></li>
+   </ul>	
+</div>
