@@ -16,9 +16,9 @@ var credentials = {key: privateKey, cert: certificate};
 /**
  * Get port from environment and store in Express.
  */
- var SSLPORT = 80;
+ var SSLPORT = '443';
 
-var port = normalizePort(process.env.PORT || '3000');
+var port = normalizePort(process.env.PORT || '80');
 app.set('port', port);
 
 
