@@ -10,10 +10,10 @@ router.get('/', function (req, res) {
 router.get('/home', function(req, res, next) {
 var User = global.dbHandel.getModel('poke');
   User.find({},function(err,doc){
-  let arr=doc
-  res.render('index', { 
-  	pokemon: arr
-  });
+    let arr=doc
+    res.render('index', { 
+    	pokemon: arr
+    });
 
    })
 });
